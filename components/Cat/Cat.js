@@ -9,6 +9,7 @@ import {
   Mouth,
   Lip,
   Whisker,
+  Pupil,
   } from './style.js';
 
 class Cat extends Component {
@@ -20,8 +21,8 @@ class Cat extends Component {
         <Head>
           <Ear left></Ear>
           <Ear right></Ear>
-          <Eye left><EyeBlink></EyeBlink></Eye>
-          <Eye right><EyeBlink></EyeBlink></Eye>
+          <Eye left><Pupil><EyeBlink></EyeBlink></Pupil></Eye>
+          <Eye right><Pupil><EyeBlink></EyeBlink></Pupil></Eye>
           <Nose></Nose>
           <Mouth><Lip left></Lip><Lip right></Lip></Mouth>
           <Whisker first></Whisker>

@@ -1,7 +1,34 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const CAT_COLOR = '#ffa6fb';
 const NOSE_HEIGHT = 50;
+
+const bgColor = keyframes`
+  0% {
+    background-color: ${CAT_COLOR};
+  }
+
+  20% {
+      background-color: #1af5c7;
+  }
+
+  40% {
+      background-color: #1821f0;
+  }
+
+  60% {
+      background-color: #f0ed12;
+  }
+
+  80% {
+      background-color: ff1212;
+  }
+
+  100% {
+      background-color: ${CAT_COLOR};
+  }
+`;
+
 export const Background = styled.div`
   position: fixed;
   width: 100%;
@@ -25,6 +52,7 @@ export const Head = styled.div`
   top: 15vh;
   max-width: 80%;
   max-height: 80vw;
+  animation: ${bgColor} 8s linear infinite;
 `;
 
 export const Eye = styled.div`
@@ -64,8 +92,8 @@ export const Eye = styled.div`
 export const EyeBlink = styled.div`
   width: 0;
   height: 0;
-  padding-left: 30%;
-  padding-top: 30%;
+  padding-left: 20%;
+  padding-top: 20%;
   overflow: hidden;
   z-index: 3;
   position: absolute;
@@ -85,12 +113,31 @@ export const EyeBlink = styled.div`
     }
 `;
 
+export const Pupil = styled.div`
+width: 100%;
+height: 100%;
+overflow: hidden;
+
+  &::after {
+    width: 10%;
+    height: 70%;
+    position: absolute;
+    transform: translate3d(-50%, 0, 0);
+    left: 50%;
+    top: 15%;
+    z-index: 3;
+    background-color: #000;
+    border-radius: 100%;
+  }
+`;
+
 export const Ear = styled.div`
   position: absolute;
   width: 40%;
   margin: auto;
   height: 40%;
   background-color: ${CAT_COLOR};
+  animation: ${bgColor} 8s linear infinite;
   top: -5%;
   ${props =>
     props.left &&
@@ -155,6 +202,7 @@ export const Lip = styled.div`
   &::after {
     content: '';
     background-color: ${CAT_COLOR};
+    animation: ${bgColor} 8s linear infinite;
     left: 50%;
     top: 50%;
     width: 90%;
@@ -168,6 +216,7 @@ export const Lip = styled.div`
   &::before {
     content: '';
     background-color: ${CAT_COLOR};
+    animation: ${bgColor} 8s linear infinite;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -201,6 +250,7 @@ export const Whisker = styled.div`
     height: 2%;
     border-radius: 25%;
     background-color: ${CAT_COLOR};
+    animation: ${bgColor} 8s linear infinite;
 
     ${props =>
       props.first &&
@@ -234,6 +284,7 @@ export const Whisker = styled.div`
     height: 2%;
     border-radius: 25%;
     background-color: ${CAT_COLOR};
+    animation: ${bgColor} 8s linear infinite;
     top: 50%;
 
     ${props =>
