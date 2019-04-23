@@ -3,6 +3,12 @@ import {
   Head,
   Background,
   Eye,
+  Ear,
+  EyeBlink,
+  Nose,
+  Mouth,
+  Lip,
+  Whisker,
   } from './style.js';
 
 class Cat extends Component {
@@ -12,8 +18,15 @@ class Cat extends Component {
       <>
       <Background>
         <Head>
-          <Eye left></Eye>
-          <Eye right></Eye>
+          <Ear left></Ear>
+          <Ear right></Ear>
+          <Eye left><EyeBlink></EyeBlink></Eye>
+          <Eye right><EyeBlink></EyeBlink></Eye>
+          <Nose></Nose>
+          <Mouth><Lip left></Lip><Lip right></Lip></Mouth>
+          <Whisker first></Whisker>
+          <Whisker second></Whisker>
+          <Whisker third></Whisker>
         </Head>
       </Background>
       </>
