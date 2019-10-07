@@ -18,7 +18,7 @@ class Cat extends Component {
     return (
       <>
       <Background>
-        <Head>
+        <Head className="animateee">
           <Ear left></Ear>
           <Ear right></Ear>
           <Eye left><Pupil><EyeBlink></EyeBlink></Pupil></Eye>

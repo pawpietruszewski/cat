@@ -37,7 +37,7 @@ export const Background = styled.div`
   right: 0;
   top: 0;
   height: 100%;
-  background-color: #2ae81f;
+  background-color: #326f2e;
 `;
 
 export const Head = styled.div`
@@ -52,6 +52,12 @@ export const Head = styled.div`
   top: 15vh;
   max-width: 80%;
   max-height: 80vw;
+  ${props =>
+    props.animate &&
+    css`
+      left: 10%;
+      transform: rotate(15deg);
+    `};
   animation: ${bgColor} 8s linear infinite;
 `;
 
