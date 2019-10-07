@@ -37,7 +37,7 @@ export const Background = styled.div`
   right: 0;
   top: 0;
   height: 100%;
-  background-color: #326f2e;
+  background-color: #6f2e39;
 `;
 
 export const Head = styled.div`
