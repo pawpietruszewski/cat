@@ -315,3 +315,20 @@ export const Whisker = styled.div`
       `}
   }
 `;
+
+export const Tounge = styled.div`
+  width: 8vh;
+  background-color: red;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  mask: url(/static/mask-tangue.svg);
+  mask-repeat: no-repeat;
+  mask-position:  50% 2vh;
+  mask-size: 25vh;
+  border-radius: 10vh;
+  opacity: ${(props) => props.showTangue ? '1' : '1'};
+  height: ${(props) => props.showTangue ? '15vh' : '0px'};
+  transition: height 0.2s ease-out;
+`;
