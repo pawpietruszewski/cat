@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CatsTangue from '../CatsTangue';
 import {
   Head,
   Background,
@@ -10,7 +11,6 @@ import {
   Lip,
   Whisker,
   Pupil,
-  Tounge,
   } from './style.js';
 
 class Cat extends Component {
@@ -46,7 +46,10 @@ class Cat extends Component {
           <Eye left><Pupil><EyeBlink></EyeBlink></Pupil></Eye>
           <Eye right><Pupil><EyeBlink></EyeBlink></Pupil></Eye>
           <Nose></Nose>
-          <Mouth><Lip left></Lip><Lip right></Lip><Tounge showTangue={this.state.showTangue}></Tounge></Mouth>
+          <Mouth>
+            <Lip left></Lip><Lip right></Lip>
+            <CatsTangue showTangue={this.state.showTangue} />
+          </Mouth>
           <Whisker first></Whisker>
           <Whisker second></Whisker>
           <Whisker third></Whisker>
